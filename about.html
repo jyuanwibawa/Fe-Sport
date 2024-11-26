@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #f8e2e2, #f8e2e2);
+            color: #333;
+        }
+
+        /* Menu and Dropdown */
+       .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+            color: #4a2c2a;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu i {
+            margin-left: 8px;
+        }
+
+        /* Hidden Checkbox for menu toggle */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Label that triggers the checkbox (acts as the "Menu" button) */
+        label[for="menu-toggle"] {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #ffffff; /* Background white */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show dropdown when checkbox is checked */
+        #menu-toggle:checked + label + .dropdown-content {
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        /* About Section */
+        .about {
+            width: 50%;
+            text-align: center;
+        }
+
+        .about h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-button:hover {
+            background-color: #333;
+        }
+
+        /* People Section */
+        .people {
+            width: 40%;
+            text-align: center;
+        }
+
+        .people h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .person {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .person img {
+            border-radius: 50%;
+            border: 3px solid #ff0000;
+            width: 100px;
+            height: 100px;
+        }
+
+        .person-info {
+            margin-top: 10px;
+        }
+
+        .person-info h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .person-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Grid for People Section */
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .people-grid.row-2 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Section -->
+    <div class="menu">
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+        <!-- Label that triggers the checkbox (acts as Menu button) -->
+        <label for="menu-toggle">
+            Menu <i class="fas fa-bars"></i>
+        </label>
+        <!-- Dropdown content -->
+        <div class="dropdown-content">
+            <a href="utama.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Customer support</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- About Section -->
+        <div class="about">
+            <h1>About Us</h1>
+            <p>
+                Spot your Sports is a one-stop guide to finding the best sports venues around Universitas Indonesia, 
+                especially the Depok area. We are dedicated to helping university students and the general public 
+                find their favorite sports venues — from basketball courts, gyms, to soccer fields — that suit their 
+                individual styles and preferences. Find the best spot to support your sporting activities!
+            </p>
+            <a class="contact-button" href="contact.html">Contact Me <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- People Section -->
+        <div class="people">
+            <h2>The People Behind</h2>
+            <div class="people-grid">
+                <div class="person">
+                    <img src="tim/Gaia - Project Manager.JPG" alt="Portrait of Gaia, Project Manager">
+                    <div class="person-info">
+                        <h3>Gaia</h3>
+                        <p>Project Manager</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="tim/Syahla - designer.jpg" alt="Portrait of Syahla, Designer">
+                    <div class="person-info">
+                        <h3>Syahla</h3>
+                        <p>Designer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="people-grid row-2">
+                <div class="person">
+                    <img src="tim/Ranty - Developer.png" alt="Portrait of Ranty, Developer">
+                    <div class="person-info">
+                        <h3>Ranty</h3>
+                        <p>Developer</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="tim/Rena - Developer.png" alt="Portrait of Rena, Developer">
+                    <div class="person-info">
+                        <h3>Rena</h3>
+                        <p>Developer</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="tim/Ilona - Developer.png" alt="Portrait of Ilona, Developer">
+                    <div class="person-info">
+                        <h3>Ilona</h3>
+                        <p>Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

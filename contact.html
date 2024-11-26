@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(to bottom right, #f8cdda, #f8cdda);
+            text-align: center;
+            color: #4a2c2a;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info div {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+       /* Menu and Dropdown */
+       .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+            color: #4a2c2a;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu i {
+            margin-left: 8px;
+        }
+
+        /* Hidden Checkbox for menu toggle */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Label that triggers the checkbox (acts as the "Menu" button) */
+        label[for="menu-toggle"] {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #ffffff; /* Background white */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show dropdown when checkbox is checked */
+        #menu-toggle:checked + label + .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Section -->
+    <div class="menu">
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+        <!-- Label that triggers the checkbox (acts as Menu button) -->
+        <label for="menu-toggle">
+            Menu <i class="fas fa-bars"></i>
+        </label>
+        <!-- Dropdown content -->
+        <div class="dropdown-content">
+            <a href="utama.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Customer support</a>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="container">
+        <h2>I'm available</h2>
+        <h1>Let's Connect</h1>
+        <p>Feel free to contact me if having any questions. I'm available for new projects or just for chatting.</p>
+        <div class="contact-info">
+            <div><i class="fas fa-envelope"></i> spotyoursports@gmail.com</div>
+            <div><i class="fas fa-phone"></i> +62 812-3456-7891</div>
+        </div>
+    </div>
+
+</body>
+</html>
