@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <style>
         /* General Styles */
         body {
@@ -58,7 +61,8 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            gap: 10px; /* Mengurangi jarak antar elemen */
+            gap: 10px;
+            /* Mengurangi jarak antar elemen */
         }
 
         .header .text {
@@ -78,7 +82,7 @@
         }
 
         .nav {
-        
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -86,7 +90,7 @@
         }
 
         .nav a {
-            font-size: 30px; 
+            font-size: 30px;
             text-decoration: none;
             color: #333;
         }
@@ -148,7 +152,8 @@
             position: absolute;
             top: 40px;
             right: 0;
-            background-color: #ffffff; /* Background white */
+            background-color: #ffffff;
+            /* Background white */
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             width: 200px;
@@ -168,13 +173,31 @@
         }
 
         /* Show dropdown when checkbox is checked */
-        #menu-toggle:checked + label + .dropdown-content {
+        #menu-toggle:checked+label+.dropdown-content {
             display: block;
         }
 
+        .logo-container {
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: -40px;
+            left: -600px;
+            margin: 10px;
+            width: 150px;
+            height: auto;
+          
+        }
     </style>
 </head>
+
 <body>
+    <div class="logo-container">
+        <img src="Link.png" alt="logo" class="logo">
+    </div>
+
 
     <!-- Menu Section -->
     <div class="menu">
@@ -184,7 +207,7 @@
         <label for="menu-toggle">
             Menu <i class="fas fa-bars"></i>
         </label>
-        <!-- Dropdown content -->
+
         <div class="dropdown-content">
             <a href="utama.html">Home</a>
             <a href="about.html">About us</a>
@@ -212,4 +235,5 @@
     </div>
 
 </body>
+
 </html>
